@@ -1,0 +1,315 @@
+.signup-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  background: #f5f6f8;
+
+  padding: 100px 30px 40px;
+}
+
+.signup-card {
+  width: 420px;
+  background: white;
+
+  padding: 40px;
+
+  border-radius: 12px;
+
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+}
+
+.signup-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.signup-logo {
+  width: 55px;
+  height: 55px;
+
+  margin: 0 auto 15px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #387ed1;
+  color: white;
+
+  border-radius: 50%;
+
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.signup-header h1 {
+  margin: 0;
+
+  font-size: 26px;
+  font-weight: 500;
+
+  color: #424242;
+}
+
+.signup-header p {
+  margin-top: 8px;
+
+  color: #777;
+  font-size: 14px;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+
+  margin-bottom: 7px;
+
+  font-size: 14px;
+  color: #424242;
+}
+
+.input-group input {
+  width: 100%;
+  box-sizing: border-box;
+
+  padding: 12px 14px;
+
+  border: 1px solid #d6d6d6;
+  border-radius: 6px;
+
+  font-size: 15px;
+
+  outline: none;
+
+  transition:
+    border 0.2s,
+    box-shadow 0.2s;
+}
+
+.input-group input:focus {
+  border-color: #387ed1;
+
+  box-shadow: 0 0 0 3px rgba(56, 126, 209, 0.1);
+}
+
+.signup-button {
+  width: 100%;
+
+  padding: 13px;
+
+  margin-top: 5px;
+
+  border: none;
+  border-radius: 6px;
+
+  background: #387ed1;
+  color: white;
+
+  font-size: 16px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s,
+    transform 0.1s;
+}
+
+.signup-button:hover {
+  background: #2f6db5;
+}
+
+.signup-button:active {
+  transform: scale(0.98);
+}
+
+.login-text {
+  text-align: center;
+
+  margin-top: 25px;
+
+  font-size: 14px;
+  color: #777;
+}
+
+.login-text span {
+  color: #387ed1;
+
+  margin-left: 5px;
+
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.terms {
+  text-align: center;
+
+  margin-top: 20px;
+
+  font-size: 11px;
+
+  color: #999;
+
+  line-height: 1.5;
+}
+
+/* Login Success Popup */
+
+.success-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0, 0, 0, 0.35);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 1000;
+}
+
+.success-popup {
+  background: white;
+
+  width: 350px;
+
+  padding: 35px;
+
+  border-radius: 12px;
+
+  text-align: center;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+
+  animation: popup 0.3s ease;
+}
+
+.success-icon {
+  width: 60px;
+  height: 60px;
+
+  margin: 0 auto 15px;
+
+  border-radius: 50%;
+
+  background: #387ed1;
+
+  color: white;
+
+  font-size: 35px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.success-popup h2 {
+  margin: 10px 0;
+
+  font-size: 22px;
+
+  color: #333;
+}
+
+.success-popup p {
+  margin-top: 8px;
+
+  font-size: 14px;
+
+  color: #666;
+}
+
+@keyframes popup {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.error-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.35);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.error-popup {
+  background: white;
+  width: 350px;
+  padding: 35px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  animation: errorPopup 0.3s ease;
+}
+
+.error-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 15px;
+  border-radius: 50%;
+  background: #e53935;
+  color: white;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.error-popup h2 {
+  margin: 10px 0;
+  font-size: 21px;
+  color: #333;
+}
+
+.error-popup p {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #666;
+}
+
+.error-popup button {
+  margin-top: 15px;
+  padding: 8px 20px;
+  border: none;
+  border-radius: 5px;
+  background: #e53935;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.error-popup button:hover {
+  background: #c62828;
+}
+
+@keyframes errorPopup {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
