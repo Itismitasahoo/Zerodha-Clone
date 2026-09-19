@@ -20,6 +20,8 @@ const uri = process.env.MONGO_URL;
 
 const app = express();
 
+app.set("trust proxy", 1);
+
 app.use(express.json());
 
 app.use(
