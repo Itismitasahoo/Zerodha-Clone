@@ -32,3 +32,17 @@ Zerodha-Clone/
 ├── dashboard/
 ├── frontend/
 └── README.md
+
+## 📸 Screenshots
+
+### Home Page
+![Home Page](screenshots/home.png)
+
+### Signup Page
+![Signup Page](screenshots/signupPage.png)
+
+### Dashboard
+![Dashboard](screenshots/dashboard.png)
+
+### Holdings
+![Holdings](screenshots/holdings.png)
