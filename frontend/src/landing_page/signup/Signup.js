@@ -8,6 +8,7 @@ function Signup() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [signupSuccess, setSignupSuccess] = useState(false);
+  const [signupError, setSignupError] = useState("");
 
   const handleSignup = async (e) => {
     e.preventDefault();
@@ -25,7 +26,7 @@ function Signup() {
       setEmail("");
       setPassword("");
     } catch (error) {
-      alert(error.response?.data?.error || "Signup failed");
+      setSignupError(error.response?.data?.error || "Signup failed");
     }
   };
 
@@ -99,6 +100,20 @@ function Signup() {
               <Link to="/login">
                 <button className="signup-button">Go to Login</button>
               </Link>
+            </div>
+          </div>
+        )}
+
+        {signupError && (
+          <div className="error-overlay">
+            <div className="error-popup">
+              <div className="error-icon">&#10006;</div>
+
+              <h2>User Already Exists</h2>
+
+              <p>{signupError}</p>
+
+              <button onClick={() => setSignupError("")}>Try Again</button>
             </div>
           </div>
         )}
