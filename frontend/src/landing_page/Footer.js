@@ -204,6 +204,14 @@ function Footer() {
             <a href="">Investor charter</a>
             <a href="">Sitemap</a>
           </div>
+          <p
+            className="text-center mt-4"
+            style={{ color: "#555", fontSize: "13px" }}
+          >
+            Built with{" "}
+            <span style={{ color: "#e63946", fontSize: "16px" }}>&#9829;</span>{" "}
+            by Itismita
+          </p>
         </div>
       </div>
     </footer>
