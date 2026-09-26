@@ -7,6 +7,7 @@ function Signup() {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [signupSuccess, setSignupSuccess] = useState(false);
 
   const handleSignup = async (e) => {
     e.preventDefault();
@@ -18,7 +19,7 @@ function Signup() {
         password,
       });
 
-      alert(response.data.message);
+      setSignupSuccess(true);
 
       setUsername("");
       setEmail("");
@@ -86,6 +87,21 @@ function Signup() {
         <p className="terms">
           By signing up, you agree to our Terms & Conditions
         </p>
+        {signupSuccess && (
+          <div className="success-overlay">
+            <div className="success-popup">
+              <div className="success-icon">&#10003;</div>
+
+              <h2>Signup Successful!</h2>
+
+              <p>Your account has been created successfully.</p>
+
+              <Link to="/login">
+                <button className="signup-button">Go to Login</button>
+              </Link>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );
